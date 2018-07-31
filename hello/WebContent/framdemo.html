@@ -1,0 +1,40 @@
+<html>
+<head>
+<script type="text/javascript">
+function display()
+{
+	var name=document.getElementById("name").value;
+	var age=document.getElementById("age").value;
+	/*alert("hai "+name+" "+age);*/
+	
+	document.getElementById("output").innerText=name;
+	document.getElementById("oname").value=name;
+	}
+
+</script>
+</head>
+<body>
+<div style="color:#00FF00;background-color:blue; textalign:
+left;width:500;height:200">
+<h1> Personal Information</h1>
+<form name=f1 >
+<table>
+<tr><td>Enter name : </td><td><input type=text  name="name" id="name"/></td></tr>
+<tr><td>Enter age : </td><td><input type=text name="age" id="age"/></td></tr>
+<tr><td><input type="submit" onmousemove="display()"/></td><td><input type="reset"/></td></tr>
+
+<tr><td></td><td></td></tr>
+<tr><td>ouput name : </td><td><input type=text  name="oname" id="oname"/></td></tr>
+
+</table>
+</form>
+</div>
+
+<p id="output"></p>
+
+<br><br><br>
+</body>
+</html>
+
+
+

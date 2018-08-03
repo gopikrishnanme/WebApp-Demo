@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script type="text/javascript" >
+function fun1()
+{
+	var number=parseInt(prompt("enter a number"));
+	for(var i=1;i<=number;i++)
+		{
+		for(var j=1;j<=i;j++)
+			{
+			document.write(j+" ");
+			}
+			document.write("<br>");
+		}
+}
+function fun2()
+{
+	var number=parseInt(prompt("enter a number"));
+	for(var i=1;i<=number;i++)
+		{
+		for(var j=1;j<=i;j++)
+			{
+			document.write("*  ");
+			}
+			document.write("<br>");
+		}
+}
+</script>
+
+
+</head>
+<body>
+<form>
+<input type="button" name="patern1" value="patern1" onclick="fun1()"/><br>
+<br>
+<input type="button" name="patern2" value="patern2" onclick="fun2()"/><br>
+</form>
+</body>
+</html>
+
+
+
+
+
+

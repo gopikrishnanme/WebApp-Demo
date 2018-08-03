@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+var date=new Date();
+document.write("<p align='right'>"+date+"</p><br>");
+var monthNames = [ "January", "February", "March",
+                  "April", "May", "June", "July",
+                  "August", "September", "October",
+                  "November", "December"
+                ];
+                var day = date.getDate();
+                var monthIndex = date.getMonth();
+                var year = date.getFullYear();
+
+                var d= day + ' ' + monthNames[monthIndex] + ' ' + year;
+
+                document.write("<h1>"+d+"</h1>");
+
+
+
+
+var b = "IamJavaScripthacker.";
+document.write("<h1>"+b+"</h1> <br>");
+document.write("<h1>"+b.indexOf('a')+"</h1> <br>");
+document.write("<h1>"+b.lastIndexOf('w')+"</h1> <br>");
+document.write("<h1>"+b.substring(4,8)+"</h1> <br>"); // extract characters from 4 to 8 location
+document.write("<h1>"+b.substr(4,8)+"</h1> <br>"); // extract 8 characters from 4 location
+document.write("<h1>"+b.charAt(5)+"</h1> <br>"); 
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
+
+
+

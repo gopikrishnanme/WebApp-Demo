@@ -1,0 +1,172 @@
+
+
+
+
+
+
+
+
+<html>
+    <script language="JavaScript" src="js/onlineStudent.js"></script>
+    <head> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Online : Student Login</title>
+        <script language="JavaScript">
+            <!--
+     var nHist = window.history.length;
+            if (window.history[nHist] != window.location)
+                window.history.forward();
+            //-->
+        </script>
+    </head>
+    <body>
+        
+
+        <!-- HEADER STARTS -->
+                          
+
+<!-- Styles & Js-->  
+<!-- GENERAL CSS-->
+<link rel="stylesheet" type="text/css" href="style/KE/perfStyleNew.css" />
+<link rel='stylesheet' type='text/css' href='style/KE/menu.css' />
+<link rel="stylesheet" type="text/css" href="style/reset.css" />
+<!-- icon style -->
+<link rel="stylesheet"  type="text/css" href="style/style-icon.css"/>
+<link rel="stylesheet" type="text/css" media="print" href="style/print.css" />
+
+<!-- GENERAL JS-->
+<script type="text/javascript" src="js/jquery-1.9.1.js" ></script>
+<script type="text/javascript" src="js/onlineStudent.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+<!-- ADVT  POPUP CSS & JS-->
+<link rel="stylesheet" type="text/css" media="all" href="style/addposterpopup.css" />
+<script type="text/javascript" src="js/addposterpopup.js"></script>         
+
+<!-- jquery calendar starts-->
+<script type="text/javascript" src="js/jquery.plugin.js"></script> 
+<script type="text/javascript" src="js/jquery.datepick.js"></script>
+<style type="text/css" media="all">@import "style/KE/jquery.datepick.css";</style>
+<!-- jquery calendar ends-->
+
+<!-- jquery calendar ends-->
+<script type="text/javascript" src="js/csspopup.js" charset="UTF-8"></script> 
+<!-- Styles & Js-->  
+
+<link rel="shortcut icon" href="images/tab-icon-kce.ico">
+
+<!-- header -->
+<div class="header" id="other">
+    <!-- header -->
+    <div class="container">
+        <div class="left">
+            <img src="images/2H.png" class="img" />
+        </div>
+        <div class="right date">
+            <div id="time"></div>
+            <div>            
+                            
+                        </div>    
+                        </div>           
+                        </div>
+                        <!-- header -->    
+                        <!-- menu -->        
+                        <div class="clear menu">
+                            <div class="container">
+                                <div class="nav">                
+                                    
+                                </div>
+                            </div>
+                            <!-- menu -->          
+                        </div>
+                        <input type="hidden" id="hdnRollNo" value="null"/>                                     
+                        <input type="hidden" id="hdnSem"  value="null"/>   
+                        </div>
+                        <!-- header -->
+                        <script>
+                            show_datetime();
+                            setInterval("show_datetime()", 1000);
+                            function show_datetime() {
+                                var curtime = new Date();
+                                var curhour = curtime.getHours();
+                                var curmin = curtime.getMinutes();
+                                var cursec = curtime.getSeconds();
+                                var time = "";
+                                if (curhour == 0)
+                                    curhour = 12;
+                                time = (curhour > 12 ? curhour - 12 : curhour) + ":" +
+                                        (curmin < 10 ? "0" : "") + curmin + ":" +
+                                        (cursec < 10 ? "0" : "") + cursec + " " +
+                                        (curhour > 12 ? "PM" : "AM");
+                                try {
+                                    document.getElementById("time").innerHTML = curtime.toLocaleDateString() + " , " + time;
+                                } catch (e) {
+                                }
+                            }
+                        </script>
+                        <script type="text/javascript">
+                            $('#cssmenu ul').mouseleave(function () {
+                                $('html,body').animate({scrollTop: 0}, 10);
+                            });   
+                            $("#" + 'null').addClass("active");
+                        </script>           
+                        <!-- to blur page -->
+                        <div class="blur" id="blur" style="display:none;"></div>
+                        <!-- to scroll top of the page -->
+                        <a href="#" class="scroll-top"></a>
+                        <!-- to HIDE FULL PAGE WHEN LOADING VALUES BY PRESSING LINK OR SUBMIT BUTTON -- START -->
+                        <div id="blanket" style="display:none;"></div>
+                        <div id="divMainBlur"></div>
+        <!-- HEADER ENDS -->       
+        <!-- CONTENT STARTS -->
+        <div class="clear contentpart">
+            <div class="container">
+                <br class="clear"/>
+                <div align="center">
+                    <form name="PerformanceForm" method="post" action="/Automation/studentOnline.do;jsessionid=260A5E0FBBA1F25CFAB982A13A1724A1?param=studentLogin" onsubmit="return onlineLoginValidate();">  
+                        <table width="50%" border="0" cellspacing="0" cellpadding="0" class="loginbox">
+                            <tr>
+                                <th class="themeClr" align="left"><h2>Login</h2></th>
+                            </tr>	
+                            <tr>
+                                <td align="center">
+                                    <table width="80%" border="0" cellspacing="0" cellpadding="0">
+                                        
+                                        <tr>
+                                            <td align="right"><label>Roll No</label></td>
+                                            <td><input type="text" class="input" value="" id="studentrollno" name="studentrollno"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right"><label>Password</label></td>
+                                            <td><input type="password" class="input" value="" id="studentpassword" name="studentpassword" onkeypress="javascript:keypressevent(event, 'studentonlinelogin');" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="butalign">
+                                                <div align="center">
+                                                    <input type="submit" value="Login" class="button button-style3 button-medium">                                                    
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <br class="clear"/>
+            </div>
+        </div>
+        <!-- CONTENT ENDS -->
+        <!-- FOOTER STARTS -->
+        <!-- Footer -->
+<div class="bottomfooter" id="other">
+    <div class="container">
+        Copyright @2013. All Rights Reserved.
+    </div>
+</div>
+<!-- Footer -->
+
+
+        <!-- FOOTER ENDS -->
+    </body>
+</html>

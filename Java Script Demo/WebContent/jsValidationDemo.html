@@ -1,0 +1,74 @@
+<html>
+<head>
+<script>
+function f()
+{
+var a=document.getElementById("name1").value;
+var b=/^[A-Za-z]+$/;
+if(!a.match(b))
+{
+alert("Name should only contain alphabets");
+return false;
+}
+else
+{
+alert("welcome");
+return true;
+}
+}
+function g()
+{
+var i;
+var c=document.getElementById("222").value;
+var d=document.getElementsByName("year");
+for(i=0;i<d.length;i++)
+{
+if(d[i].checked)
+{
+	if(c==d[i].value)
+	{
+return true;
+}
+else
+{
+alert("Only yr2 must be selected");
+}
+}
+}
+
+}
+</script>
+<center>
+<h2> A sample HTML Data Entry Form</h2>
+<title>lab exe</title>
+</head>
+<body>
+<form >
+<table>
+<tr><td>Enter your Name    :</td><td><input type ="text" id="name1" /></td></tr>
+<tr><td>Enter your Password:</td><td><input type="password" id="pass" /></td></tr>
+<tr><td>Which year?</td> <td> <input type="radio" id="111" name="year" value="first" />Yr1
+                    <input type="radio" id="222" name="year" value="second" />Yr2
+                   <input type="radio" id="333" name="year" value="third" />Yr3</td></tr>
+<tr><td>Subject registered :</td> <td>  <input type="checkbox" id="11" name="1" />E101
+                    <input type="checkbox" id="12" name="2" />E102
+                    <input type="checkbox" id="13" name="3" />E103</td></tr>
+<tr><td>Select Day         :</td> <td>  <select id="00" >
+                    <option value="0">Monday</option>
+                    <option value="1">Tuesday</option>
+                    <option value="2">Wednesday</option>
+                    <option value="3">Thursday</option>
+                    <option value="4">Friday</option>
+                    <option value="5">Saturday</option>
+                    <option value="6">Sunday</option>
+</select>
+</td></tr>
+<tr><td><textarea rows="4" cols="5" style="width: 233px; height: 94px;">
+Enter your special request here</textarea></td></tr>
+<tr><td><input type="submit" value="SEND" onclick="return f(),g()"/></td>  
+<td><input type="reset" value="CLEAR"/></td></tr>
+</table>
+</form>
+</center>
+</body>
+</html>
